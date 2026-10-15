@@ -82,6 +82,12 @@ img,video,audio{-webkit-touch-callout:none}img{-webkit-user-drag:none}
 .riddle-feedback{text-align:center;font:17px Arial,sans-serif;min-height:28px;color:var(--ink);margin:16px 0}
 @media(max-width:620px){.riddle-images{gap:6px;margin-bottom:20px}.riddle-image{border-radius:9px}.riddle-questions{gap:9px}.riddle-question{padding:10px 12px}.riddle-question-label{font-size:17px}.riddle-play{width:44px;height:44px}}
 
+
+/* Картинки остаются видимыми, пока ребёнок прокручивает список загадок. */
+#riddleImages{position:sticky;top:0;z-index:5;background:var(--paper);padding:8px 0;margin-bottom:16px;border-bottom:1px solid var(--line)}
+#riddleImages .riddle-image{min-height:0}
+#riddleImages .riddle-image img{max-height:22vh;max-height:22svh;object-fit:contain}
+#riddleQuestions .riddle-question{scroll-margin-top:calc(44vh + 38px);scroll-margin-top:calc(44svh + 38px)}
 </style></head><body><svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><defs>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
 <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"/></symbol>
